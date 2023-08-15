@@ -62,7 +62,6 @@ export default defineComponent({
 </script>
 <style scoped lang="scss">
 a {
-  text-decoration: none;
   .recipe {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.05);

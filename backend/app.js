@@ -4,6 +4,11 @@ const bodyParser = require('body-parser')
 const path = require('path');
 const app = express();
 const port = 3000;
+require('dotenv').config();
+
+const username = process.env.MONGODB_USERNAME;
+const password = process.env.MONGODB_PASSWORD;
+const dbName = "recipes";
 
 const { MongoClient } = require('mongodb');
 
@@ -35,7 +40,7 @@ app.post("/uploads", (req, res) => {
     for (const fieldname in req.files) {
       const file = req.files[fieldname];
       const fileName = file.name;
-      const uploadPath = path.join(__dirname, 'uploads', fileName); // Ścieżka do folderu "uploads"
+      const uploadPath = path.join(__dirname, 'uploads', fileName);
 
       file.mv(uploadPath, err => {
         if (err) {
@@ -79,7 +84,7 @@ app.get('/recipes', async (req, res) => {
 });
 
 app.listen(port, async () => {
-  const uri = "mongodb+srv://joniakszymon:4Razypo2Razy@cluster0.zv8zrdv.mongodb.net/?retryWrites=true&w=majority";
+  const uri = `mongodb+srv://${username}:${password}@cluster0.zv8zrdv.mongodb.net/${dbName}?retryWrites=true&w=majority`;
   const client = new MongoClient(uri);
 
   try {

@@ -45,9 +45,19 @@ $font-size-base: 16px;
   height: 100%;
   margin-top: 140px;
 }
-ul > li {
-  a {
-    padding: 10px 15px;
+ul > li > a {
+  padding: 10px 15px;
+}
+button {
+  border: none;
+  padding: 10px 15px;
+  background-color: #0f0f0f;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: scale 0.3s;
+  &:hover {
+    scale: 1.1;
   }
 }
 </style>

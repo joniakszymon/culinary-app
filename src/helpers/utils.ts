@@ -1,11 +1,72 @@
 export function slugify(text: string): string {
-    return text
-      .toString()
-      .toLowerCase()
-      .replace(/\s+/g, '-')
-      .replace(/[^\w-]+/g, '')
-      .replace(/--+/g, '-')
-      .replace(/^-+/, '')
-      .replace(/-+$/, '');
-  }
-  
+  return text
+    .toString()
+    .toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/[^\w-]+/g, '')
+    .replace(/--+/g, '-')
+    .replace(/^-+/, '')
+    .replace(/-+$/, '');
+}
+
+export const ingredients = [
+  "bułka tarta",
+  "śmietana",
+  "jogurt",
+  "kefir",
+  "cukier puder",
+  "kakao",
+  "czekolada",
+  "miód",
+  "konfitura",
+  "masał",
+  "czosnkowy sos",
+  "musztarda",
+  "ketchup",
+  "soja",
+  "oliwa z oliwek",
+  "olej rzepakowy",
+  "olej słonecznikowy",
+  "ryż basmati",
+  "ryż jaśminowy",
+  "kuskus",
+  "kasza gryczana",
+  "kasza jaglana",
+  "kasza jęczmienna",
+  "kasza manna",
+  "jogurt naturalny",
+  "jogurt grecki",
+  "kefir",
+  "maślanka",
+  "twarożek",
+  "ser feta",
+  "ser ricotta",
+  "ser mozzarella",
+  "jogurt waniliowy",
+  "owoce morza",
+  "łosoś",
+  "tuńczyk",
+  "krewetki",
+  "mąka pszenna",
+  "mąka ryżowa",
+  "mąka kukurydziana",
+  "cukier waniliowy",
+  "cukier brązowy",
+  "cukier trzcinowy",
+  "marchew",
+  "por",
+  "pietruszka",
+  "seler",
+  "ziemniak",
+  "cebula",
+  "czosnek",
+  "kapusta",
+  "szpinak",
+  "sałata",
+  "rukola",
+  "cykoria",
+  "grzyby",
+  "bakłażan",
+  "pomidor",
+  "ogórek",
+]

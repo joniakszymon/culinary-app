@@ -1,7 +1,7 @@
 <template>
   <router-link :to="`/recipe/${slugify(recipe?.title as string)}`">
     <div class="recipe">
-      <img :src="recipe?.imgSrc" :alt="`image of ${recipe?.title}`" />
+      <img :src="`http://localhost:3000/uploads/${recipe?.imgSrc}`" :alt="`image of ${recipe?.title}`" />
       <div class="info">
         <p class="title">{{ recipe?.title }}</p>
         <p class="serving">
@@ -67,9 +67,11 @@ a {
     box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.05);
     overflow: hidden;
     transition: scale 0.3s ease-in-out;
+    height: 420px;
     img {
       width: 100%;
       height: auto;
+      object-fit: cover;
     }
     .info {
       padding: 10px;
